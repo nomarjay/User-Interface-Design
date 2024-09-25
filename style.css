@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 60vw;
+    height: 100%;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form,section,fieldset{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+fieldset{
+    border-bottom: 2px solid black;
+}
