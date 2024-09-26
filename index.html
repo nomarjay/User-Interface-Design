@@ -1,58 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="style.css">
-    <title>UNFinished Business</title>
-  </head>
-  <body>
-    <div class="container">
-        <h1>UNFinished Business</h1>
-        <form>
-            <!-- DATE -->
-            <label for="date">application date
-                <input type="text">
-            </label>
-            <!-- PERSIONAL INFORMATION -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form with JSON</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const formData = {
+                "formTitle": "User Registration",
+                "fields": [
+                    {
+                        "label": "First Name",
+                        "type": "text",
+                        "name": "firstName",
+                        "placeholder": "Enter your first name",
+                        "required": true
+                    },
+                    {
+                        "label": "Last Name",
+                        "type": "text",
+                        "name": "lastName",
+                        "placeholder": "Enter your last name",
+                        "required": true
+                    },
+                    {
+                        "label": "Email",
+                        "type": "email",
+                        "name": "email",
+                        "placeholder": "Enter your email",
+                        "required": true
+                    },
+                    {
+                        "label": "Password",
+                        "type": "password",
+                        "name": "password",
+                        "placeholder": "Enter your password",
+                        "required": true
+                    }
+                ]
+            };
 
-            <section>
-                <!-- NAME -->
-                <fieldset>
-                    <legend>name</legend>
-                    <label for="fName">first name
-                        <input type="text">
-                    </label>
-                    <label for="LName">last name
-                        <input type="text">
-                    </label>
-                    <label for="mName">middle name
-                        <input type="text">
-                    </label>
-                    <label for="maidenName">maiden name
-                        <input type="text">
-                    </label>
-                </fieldset>
-                <!-- ADDRESS -->
-                 <fieldset>
-                    <legend>address</legend>
-                     <label for="street">street
-                        <input type="text">
-                     </label>
-                     <label for="city">city
-                        <input type="text">
-                     </label>
-                     <label for="address">ADDRESS
-                        <input type="text">
-                     </label>
-                     <label for="address">ADDRESS
-                        <input type="text">
-                     </label>
-                 </fieldset>
-            </section>
-        </form>
-    </div>
-  </body>
+            const formContainer = document.getElementById('form-container');
+            const form = document.createElement('form');
+            form.id = 'dynamic-form';
+
+            const formTitle = document.createElement('h2');
+            formTitle.textContent = formData.formTitle;
+            form.appendChild(formTitle);
+
+            formData.fields.forEach(field => {
+                const label = document.createElement('label');
+                label.textContent = field.label;
+
+                const input = document.createElement('input');
+                input.type = field.type;
+                input.name = field.name;
+                input.placeholder = field.placeholder;
+                input.required = field.required;
+
+                form.appendChild(label);
+                form.appendChild(input);
+                form.appendChild(document.createElement('br'));
+            });
+
+            // Create Submit button
+            const submitBtn = document.createElement('button');
+            submitBtn.type = 'submit';
+            submitBtn.textContent = 'Submit';
+            form.appendChild(submitBtn);
+
+            formContainer.appendChild(form);
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const formDataObj = {};
+                formData.fields.forEach(field => {
+                    formDataObj[field.name] = form.elements[field.name].value;
+                });
+
+                const jsonFormData = JSON.stringify(formDataObj);
+
+                // Send data to the server via POST request
+                fetch('/submitForm', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: jsonFormData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    alert('Form submitted successfully');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="form-container"></div>
+</body>
 </html>
