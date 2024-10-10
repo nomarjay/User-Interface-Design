@@ -1,196 +1,70 @@
-        <!-- page-two -->
-        <div id="page-two">
-          <!-- employment history -->
-          <h2>Employment History</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>UNFinished Business</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>UNFinished Business</h1>
+      <form id="click-thru-form">
+        <fieldset class="personal-information">
           <div>
-            <section>
-              <h4>Work Experience</h4>
-              <fieldset>
-                <div>
-                  <label>Employers Name</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>City</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>State</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>Zip</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>Phone Number</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>Supervisor's Name</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>Employment Start Date</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>Employment End Date</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>Job Title</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>Reason for leaving</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>List duties performed</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>May We Contact</label>
-                  <input type="text" />
-                </div>
-              </fieldset>
-            </section>
+            <label for="fName" required="true">First Name</label>
+            <input type="text">
           </div>
-        </div>
+          <div>
+            <label for="mName">Middle Name</label>
+            <input type="text">
+          </div>
+          <div>
+            <label for="lName">Last Name</label>
+            <input type="text">
+          </div>
+          <!-- address block -->
+          <div class="address">
+            <label>Address</label>
+            <div>
+              <label for="street">Street</label>
+              <input type="text">
+            </div>
+            <div>
+              <label for="city">City</label>
+              <input type="text">
+            </div>
+            <div>
+              <label for="state">State</label>
+              <input type="text">
+            </div>
+            <div>
+              <label for="zip">Zip</label>
+              <input type="text">
+            </div>
+          </div>
 
-        <!-- page 3 -->
-        <div id="page-three">
-          <!-- education -->
-          <h2>Education</h2>
-          <section>
-            <h4>Academic Background</h4>
-            <fieldset>
-              <div>
-                <label>Institution Type</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Instution Name</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>City</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>State</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Graduation Date</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Degree Earned</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Major/Certificate</label>
-                <input type="text" />
-              </div>
-            </fieldset>
-          </section>
-        </div>
+          <!-- end address block -->
+          <div>
+            <label for="emailAddress">Email Address</label>
+            <input type="text">
+          </div>
+          <div>
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text">
+          </div>
+        </fieldset>
+        <button>Next</button>
+        <!-- end contact details -->
+      </form>
 
-        <!-- page 4 -->
-        <div id="page-four">
-          <!-- skills and qualifications-->
-          <h2>Skills and Qualifications</h2>
-          <section>
-            <h4>Additional Information</h4>
-            <fieldset>
-              <div>
-                <label
-                  >Additional Skills, Experiences, or Certifications relevant to
-                  the position</label
-                >
-                <textarea rows="4" cols="75" style="display: block"></textarea>
-              </div>
-            </fieldset>
-          </section>
-        </div>
-
-        <!-- page 5 -->
-        <div id="page-five">
-          <!-- references-->
-          <h2>References</h2>
-          <section>
-            <h4>
-              Professional References (Not Relatives or Previous Employers)
-            </h4>
-            <fieldset>
-              <div>
-                <label>First Name</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Last Name</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Company</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Job Title</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Street</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>City</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>State</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Zip</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Phone Number</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Email</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label>Relationship to Applicant</label>
-                <input type="text" />
-              </div>
-            </fieldset>
-          </section>
-        </div>
-
-        <!-- page 6 -->
-        <div id="page-six">
-          <!-- legal information-->
-          <h2>Legal Information (Compliance)</h2>
-          <section>
-            <h4>Background Check</h4>
-            <fieldset>
-              <div>
-                <label>Have You Ever Been Convicted of a Crime? (Yes/No)</label>
-                <input type="text" />
-              </div>
-              <div>
-                <label
-                  >If "Yes", Description of the Offense (Include Date, Type
-                  (Misdemeanor/Felony), and Details)</label
-                >
-                <textarea rows="4" cols="75" style="display: block"></textarea>
-              </div>
-            </fieldset>
-          </section>
-        </div>
+    </div>
+  </body>
+</html>

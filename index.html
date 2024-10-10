@@ -11,124 +11,91 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="script.js"></script>
     <title>UNFinished Business</title>
-    <script src="/script.js"></script>
   </head>
   <body>
-    <div class="container">
-
-      <!-- start form -->
-      <form>
-        <!-- page 1 -->
-        <div id="page-one">
-          <!-- personal information -->
-          <header>
-            <h2>Personal Information</h2>
-            <nav>
-              <a href="#">Name</a>
-              <a href="#">Comtact Derails</a>
-              <a href="#">Name</a>
-            </nav>
-          </header>
-          <div class="form-container">
-            <!-- name -->
-            <section>
-              <fieldset>
-                <div>
-                  <input type="text" placeholder="John" />
-                  <label>First</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="Doe" />
-                  <label>Last</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="M" />
-                  <label>Middle</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="example@email.com" />
-                  <label>Email</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="555-555-5555" />
-                  <label>Phone Number</label>
-                </div>
-              </fieldset>
-               <!-- <button type="button" class="next-btn" data-next="page-two">Next</button> -->
-               <aside>
-                 <div class="aside-nav">
-                    <a href="#">Name</a>
-                    <a href="#">Contact Details</a>
-                    <a href="#">Position and Availability</a>
-                   
-                 </div>
-               </aside>
-            </section>
-
-            <!-- Contact Details -->
-            <!-- <section>
-              <p>Contact Details</p>
-              <fieldset>
-
-                <div>
-                  <input type="text" placeholder="123 Main Steet" />
-                  <label>Street</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="New York City" />
-                  <label>City</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="New York" />
-                  <label>State</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="12345" />
-                  <label>Zip Code</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="example@email.com" />
-                  <label>Email</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="555-555-5555" />
-                  <label>Phone Number</label>
-                </div>
-              </fieldset>
-            </section>
-      
-
-            position and availability -->
-            <!-- <section>
-              <p>Position and Availability</p>
-              <fieldset>
-                <div>
-                  <input type="text" placeholder="Help Desk Assistant" />
-                  <label>Position Applied For</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="$35,000" />
-                  <label>Desired Salary</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="YY/MM/YYYY" />
-                  <label>Start Date</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="Yes" />
-                  <label>Can you work nights?</label>
-                </div>
-                <div>
-                  <input type="text" placeholder="Yes" />
-                  <label>Are you at least 18 years old?</label>
-                </div>
-              </fieldset>
-            </section> -->
+    <div class="form-container">
+      <form id="click-thru-form">
+        <h1>UNFinished Business</h1>
+        <!-- Step 1: Personal Information -->
+        <fieldset class="step active personal-information">
+          <!-- name block -->
+          <div>
+            <label for="fName" required="true">First Name</label>
+            <input type="text">
           </div>
-        </div>
+          <div>
+            <label for="mName">Middle Name</label>
+            <input type="text">
+          </div>
+          <div>
+            <label for="lName">Last Name</label>
+            <input type="text">
+          </div>
+          <!-- end name block -->
+          <!-- address block -->
+          <div class="address">
+            <div>
+              <label>Address:</label>
+              <label for="street">Street</label>
+              <input type="text">
+            </div>
+            <div>
+              <label for="city">City</label>
+              <input type="text">
+            </div>
+            <div>
+              <label for="state">State</label>
+              <input type="text">
+            </div>
+            <div>
+              <label for="zip">Zip</label>
+              <input type="text">
+            </div>
+          </div>
+          <!-- end address block -->
+          <!-- contact block -->
+          <div>
+            <label for="emailAddress">Email Address</label>
+            <input type="text">
+          </div>
+          <div>
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text">
+          </div>
+          <button type="button" id="nextBtn">Next</button>
+        </fieldset>
+        <!-- end contact block -->
+        <!-- end persional information -->
+
+        <!-- Step 2: Availability -->
+        <fieldset class="step availability">
+          <div>
+            <label>Position Applied For</label>
+            <input type="text">
+          </div>
+          <div>
+            <label>Desired Salary</label>
+            <input type="text">
+          </div>
+          <div>
+            <label>Start Date</label>
+            <input type="text">
+          </div>
+          <div>
+            <label>Can You Work Nights? (Yes/No)</label>
+            <input type="text">
+          </div>
+          <div>
+            <label>Are You At Least 18 Years Old? (Yes/No)</label>
+            <input type="text">
+          </div>
+          <button type="button" id="prevBtn">Previous</button>
+        </fieldset>
       </form>
-      <!-- end form -->
+
     </div>
   </body>
 </html>
