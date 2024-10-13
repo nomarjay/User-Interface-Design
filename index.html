@@ -37,7 +37,7 @@
         <!-- step 1 fieldset -->
         <fieldset id="step-1" class="row">
           <!-- Step 1: Personal Information -->
-
+          <h2>Personal Information</h2>
           <!-- name block -->
           <legend>Personal Information</legend>
           <div class="col-md-5">
@@ -179,17 +179,19 @@
           </div>
           <div class="col-md-4">
             <label for="job-title" class="form-label">Job Title</label>
-            <input
-              type="text"
-              class="form-control"
-              id="job-title"
-              required
-            />
+            <input type="text" class="form-control" id="job-title" required />
           </div>
 
           <div class="col-md-2">
-            <label for="employer-phone" class="form-label">Employer Phone Number</label>
-            <input type="text" class="form-control" id="employer-phone" required>
+            <label for="employer-phone" class="form-label"
+              >Employer Phone Number</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="employer-phone"
+              required
+            />
           </div>
 
           <div class="col-md-4">
@@ -221,42 +223,25 @@
             />
           </div>
           <div class="col-md-2">
-            <label for="start-date" class="form-label"
-              >Start Date</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="start-date"
-              required
-            />
+            <label for="start-date" class="form-label">Start Date</label>
+            <input type="text" class="form-control" id="start-date" required />
           </div>
           <div class="col-md-2">
-            <label for="end-date" class="form-label"
-              >End Date</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="end-date"
-              required
-            />
+            <label for="end-date" class="form-label">End Date</label>
+            <input type="text" class="form-control" id="end-date" required />
           </div>
 
           <div class="col-md-4">
-            <label for="salary" class="form-label"
-              >Pay or Salary</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="salary"
-              required
-            />
+            <label for="salary" class="form-label">Pay or Salary</label>
+            <input type="text" class="form-control" id="salary" required />
           </div>
           <div class="col-md-12 form">
             <label for="leaving">Reason for leaving</label>
-            <textarea class="form-control" id="leaving" style="height: 100px"></textarea>
+            <textarea
+              class="form-control"
+              id="leaving"
+              style="height: 100px"
+            ></textarea>
           </div>
 
           <div class="col-md-2 form-check">
@@ -281,7 +266,7 @@
               />
               <label class="form-check-label" for="no">No</label>
             </div>
-          </div>  
+          </div>
 
           <!-- Previous and Next buttons -->
           <div class="col-md-12">
@@ -294,23 +279,104 @@
           </div>
         </fieldset>
 
-        <!-- Step 3: Position and Availability -->
-        <fieldset id="step-3" >
+        <!-- Step 3: Education -->
+        <fieldset id="step-3" class="row">
           <h2>Education</h2>
-          <legend>Position and Availability</legend>
+          <!-- 
+          Highest Diploma/Degree/Certificate Earned
+        ○ School Name (High School, Undergraduate, Graduate, Professional)
+        ○ City, State
+        ○ Graduation Date
+        ○ Major/Degree/Certificate Earned
+        -->
+          <legend>Academic Background</legend>
+          <div class="col-md-4 form-check">
+            <label for="Institution Type">Institution Type</label>
+            <div>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="high-school"
+                value="high-school"
+                id="high-school"
+              />
+              <label class="form-check-label" for="high-school"
+                >High School</label
+              >
+            </div>
+            <div>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="undergraduate"
+                value="undergraduate"
+                id="undergraduate"
+              />
+              <label class="form-check-label" for="undergraduate"
+                >Undergraduate</label
+              >
+            </div>
+            <div>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="graduate"
+                value="graduate"
+                id="graduate"
+              />
+              <label class="form-check-label" for="graduate">Graduate</label>
+            </div>
+            <div>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="post-graduate"
+                value="post-graduate"
+                id="post-graduate"
+              />
+              <label class="form-check-label" for="post-graduate"
+                >Post Graduate</label
+              >
+            </div>
+            <div>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="professional"
+                value="professional"
+                id="professional"
+              />
+              <label class="form-check-label" for="professional"
+                >Professional</label
+              >
+            </div>
+          </div>
           <div class="col-md-4">
-            <label for="positionApplied" class="form-label"
-              >Position Applied For</label
+            <label for="degree-earned" class="form-label"
+              >Highest Dilpoma/Degree/Certificate Earned</label
             >
-            <input type="text" class="form-control" id="positionApplied" />
+            <input type="text" class="form-control" id="degree-earned" />
+          </div>
+
+          <div class="col-md-4">
+            <label for="school-name">School Name</label>
+            <input type="text" id="school-name" class="form-control" />
+          </div>
+          <div class="col-md-4">
+            <label for="school-city">City</label>
+            <input type="text" id="school-city" class="form-control" />
           </div>
           <div class="col-md-2">
-            <label for="desiredSalary" class="form-label">Desired Salary</label>
-            <input type="text" class="form-control" id="desiredSalary" />
+            <label for="school-state">State</label>
+            <input type="text" id="school-state" class="form-control" />
           </div>
           <div class="col-md-2">
-            <label for="startDate" class="form-label">Start Date</label>
-            <input type="text" class="form-control" id="startDate" />
+            <label for="graduation-date">Graduation Date</label>
+            <input type="text" id="graduation-date" class="form-control" />
+          </div>
+          <div class="col-md-4">
+            <label for="major">Major/Degree/Certificate Earned</label>
+            <input type="text" id="major" class="form-control" />
           </div>
 
           <!-- Previous and Submit buttons -->
@@ -319,6 +385,97 @@
               Previous
             </button>
             <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+        </fieldset>
+
+        <!-- step 4: Skills -->
+        <!-- skills & education block -->
+        <fieldset id="step-4" class="row">
+          <h2>Skills & Qualifications</h2>
+          <legend>Additional Information</legend>
+          <div>
+            <label for="additional-info"
+              >Additional Skills, Experiences, or Certifications relevant to the
+              position</label
+            >
+            <textarea
+              class="form-control"
+              id="additional-info"
+              style="height: 200px"
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <!-- step 5: Skills -->
+        <!-- references block -->
+        <fieldset id="step-5" class="row">
+          <h2>Professional References</h2>
+          <legend>References</legend>
+          <div class="col-md-5">
+            <label for="reference-first-name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="reference-first-name" required />
+          </div>
+          <div class="col-md-6">
+            <label for="reference-last-name" class="form-label">
+              Last Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="middleInitial"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="reference-company" class="form-label">Company</label>
+            <input type="text" class="form-control" id="reference-company" required />
+          </div>
+
+          <div class="col-md-2">
+            <label for="reference-job-title" class="form-label">
+              Job Title</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="reference-job-title"
+              required
+            />
+          </div>
+
+          <!-- address block -->
+          <legend>Address</legend>
+          <div class="col-md-4">
+            <label for="reference-street" class="form-label">Street</label>
+            <input type="text" class="form-control" id="reference-street" required />
+          </div>
+          <div class="col-md-4">
+            <label for="reference-city" class="form-label">City</label>
+            <input type="text" class="form-control" id="reference-city" required />
+          </div>
+          <div class="col-md-2">
+            <label for="state" class="form-label">State</label>
+            <input type="text" class="form-control" id="reference-state" required />
+          </div>
+          <div class="col-md-2">
+            <label for="reference-zip-code" class="form-label">Zip Code</label>
+            <input type="text" class="form-control" id="reference-zip-code" required />
+          </div>
+
+          <!-- contact block -->
+           <legend>Contact Information</legend>
+          <div class="col-md-8">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="text" class="form-control" id="email" required />
+          </div>
+          <div class="col-md-4">
+            <label for="phone" class="form-label">Phone</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              placeholder="+1 (555)555-5555"
+            />
           </div>
         </fieldset>
       </form>
