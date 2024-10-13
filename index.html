@@ -132,14 +132,14 @@
             </div>
           </div>
           <div class="col-md-2 form-check">
-            <label for="nightAvailability"
+            <label for="night-availability"
               >Are You At Least 18 Years Old?</label
             >
             <div>
               <input
                 class="form-check-input"
                 type="radio"
-                name="nightAvailability"
+                name="night-availability"
                 value="yes"
                 id="yes"
               />
@@ -157,7 +157,9 @@
             </div>
           </div>
           <div class="col-md-12">
-            <button type="submit" class="btn btn-primary" id="next-1">Next</button>
+            <button type="submit" class="btn btn-primary" id="next-1">
+              Next
+            </button>
           </div>
         </fieldset>
 
@@ -166,9 +168,28 @@
         <fieldset id="step-2" class="row">
           <h2>Employment History</h2>
           <legend>Work Experience</legend>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <label for="employer-name" class="form-label">Employer Name</label>
-            <input type="text" class="form-control" id="employer-name" required />
+            <input
+              type="text"
+              class="form-control"
+              id="employer-name"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="job-title" class="form-label">Job Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="job-title"
+              required
+            />
+          </div>
+
+          <div class="col-md-2">
+            <label for="employer-phone" class="form-label">Employer Phone Number</label>
+            <input type="text" class="form-control" id="employer-phone" required>
           </div>
 
           <div class="col-md-4">
@@ -177,21 +198,90 @@
           </div>
           <div class="col-md-4">
             <label for="employer-city" class="form-label">City</label>
-            <input type="text" class="form-control" id="employer-city"/>
+            <input type="text" class="form-control" id="employer-city" />
           </div>
           <div class="col-md-2">
             <label for="employer-state" class="form-label">State</label>
             <input type="text" class="form-control" id="employer-state" />
           </div>
           <div class="col-md-2">
-            <label for="zipCode" class="form-label">Zip Code</label>
-            <input type="text" class="form-control" id="zipCode" />
+            <label for="employer-zipCode" class="form-label">Zip Code</label>
+            <input type="text" class="form-control" id="employer-zipCode" />
           </div>
 
-                    <div class="col-md-12">
-            <label for="supervisor-name" class="form-label">Supervisor's Name</label>
-            <input type="text" class="form-control" id="supervisor-name" required />
+          <div class="col-md-4">
+            <label for="supervisor-name" class="form-label"
+              >Supervisor's Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="supervisor-name"
+              required
+            />
           </div>
+          <div class="col-md-2">
+            <label for="start-date" class="form-label"
+              >Start Date</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="start-date"
+              required
+            />
+          </div>
+          <div class="col-md-2">
+            <label for="end-date" class="form-label"
+              >End Date</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="end-date"
+              required
+            />
+          </div>
+
+          <div class="col-md-4">
+            <label for="salary" class="form-label"
+              >Pay or Salary</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="salary"
+              required
+            />
+          </div>
+          <div class="col-md-12 form">
+            <label for="leaving">Reason for leaving</label>
+            <textarea class="form-control" id="leaving" style="height: 100px"></textarea>
+          </div>
+
+          <div class="col-md-2 form-check">
+            <label for="contact-queation">May We Contact?</label>
+            <div>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="contact-question"
+                value="yes"
+                id="yes"
+              />
+              <label class="form-check-label" for="yes">Yes</label>
+            </div>
+            <div>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="contact-question"
+                value="no"
+                id="no"
+              />
+              <label class="form-check-label" for="no">No</label>
+            </div>
+          </div>  
 
           <!-- Previous and Next buttons -->
           <div class="col-md-12">
@@ -205,7 +295,8 @@
         </fieldset>
 
         <!-- Step 3: Position and Availability -->
-        <fieldset id="step-3" style="display: none">
+        <fieldset id="step-3" >
+          <h2>Education</h2>
           <legend>Position and Availability</legend>
           <div class="col-md-4">
             <label for="positionApplied" class="form-label"
