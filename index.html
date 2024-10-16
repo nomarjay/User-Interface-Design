@@ -92,6 +92,7 @@
             <label for="zipCode" class="form-label">Zip Code</label>
             <input type="text" class="form-control" id="zipCode" required />
           </div>
+
           <!-- availability -->
           <legend>Position and Availability</legend>
           <div class="col-md-4">
@@ -164,9 +165,9 @@
         </fieldset>
 
         <!-- step-2 fieldset -->
-
-        <fieldset id="step-2" class="row">
+        <fieldset id="step-2" class="row d-none">
           <h2>Employment History</h2>
+          <!-- employer information -->
           <legend>Work Experience</legend>
           <div class="col-md-6">
             <label for="employer-name" class="form-label">Employer Name</label>
@@ -182,6 +183,7 @@
             <input type="text" class="form-control" id="job-title" required />
           </div>
 
+          <!-- employer contact -->
           <div class="col-md-2">
             <label for="employer-phone" class="form-label"
               >Employer Phone Number</label
@@ -194,6 +196,7 @@
             />
           </div>
 
+          <!-- employer address -->
           <div class="col-md-4">
             <label for="employer-street" class="form-label">Street</label>
             <input type="text" class="form-control" id="employer-street" />
@@ -211,6 +214,7 @@
             <input type="text" class="form-control" id="employer-zipCode" />
           </div>
 
+          <!-- work details -->
           <div class="col-md-4">
             <label for="supervisor-name" class="form-label"
               >Supervisor's Name</label
@@ -280,15 +284,9 @@
         </fieldset>
 
         <!-- Step 3: Education -->
-        <fieldset id="step-3" class="row">
+        <fieldset id="step-3" class="row d-none">
           <h2>Education</h2>
-          <!-- 
-          Highest Diploma/Degree/Certificate Earned
-        ○ School Name (High School, Undergraduate, Graduate, Professional)
-        ○ City, State
-        ○ Graduation Date
-        ○ Major/Degree/Certificate Earned
-        -->
+          <!-- academic informtiom -->
           <legend>Academic Background</legend>
           <div class="col-md-4 form-check">
             <label for="Institution Type">Institution Type</label>
@@ -362,6 +360,8 @@
             <label for="school-name">School Name</label>
             <input type="text" id="school-name" class="form-control" />
           </div>
+
+          <!-- address block -->
           <div class="col-md-4">
             <label for="school-city">City</label>
             <input type="text" id="school-city" class="form-control" />
@@ -370,6 +370,8 @@
             <label for="school-state">State</label>
             <input type="text" id="school-state" class="form-control" />
           </div>
+
+          <!-- date block -->
           <div class="col-md-2">
             <label for="graduation-date">Graduation Date</label>
             <input type="text" id="graduation-date" class="form-control" />
@@ -379,18 +381,20 @@
             <input type="text" id="major" class="form-control" />
           </div>
 
-          <!-- Previous and Submit buttons -->
+          <!-- Previous and Next buttons -->
           <div class="col-md-12">
             <button type="button" class="btn btn-secondary" id="prev-3">
               Previous
             </button>
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="button" class="btn btn-primary" id="next-3">
+              Next
+            </button>
           </div>
         </fieldset>
 
         <!-- step 4: Skills -->
         <!-- skills & education block -->
-        <fieldset id="step-4" class="row">
+        <fieldset id="step-4" class="row d-none">
           <h2>Skills & Qualifications</h2>
           <legend>Additional Information</legend>
           <div>
@@ -404,11 +408,21 @@
               style="height: 200px"
             ></textarea>
           </div>
+
+          <!-- Previous and Next buttons -->
+          <div class="col-md-12">
+            <button type="button" class="btn btn-secondary" id="prev-4">
+              Previous
+            </button>
+            <button type="button" class="btn btn-primary" id="next-4">
+              Next
+            </button>
+          </div>
         </fieldset>
 
         <!-- step 5: Skills -->
         <!-- references block -->
-        <fieldset id="step-5" class="row">
+        <fieldset id="step-5" class="row d-none">
           <h2>Professional References</h2>
           <legend>References</legend>
           <div class="col-md-5">
@@ -476,6 +490,16 @@
               id="phone"
               placeholder="+1 (555)555-5555"
             />
+          </div>
+
+          <!-- Previous and Next buttons -->
+          <div class="col-md-12">
+            <button type="button" class="btn btn-secondary" id="prev-5">
+              Previous
+            </button>
+            <button type="button" class="btn btn-primary" id="next-5">
+              Next
+            </button>
           </div>
         </fieldset>
       </form>
