@@ -502,6 +502,86 @@
             </button>
           </div>
         </fieldset>
+
+        <fieldset id="step-6" class="row d-none">
+          <h2>Legal Information</h2>
+          <legend>Legal Information</legend>
+          <div class="col-md-4 form-check">
+            <label for="legal">Have You Ever Been Convicted of a Crime? (Yes/No)</label>
+            <div>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="legal-yes"
+                value="legal-yes"
+                id="legal"
+              />
+              <label class="form-check-label" for="legal-yes"
+                >Yes</label
+              >
+            </div>
+              <div>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="legal-no"
+                  value="legal-no"
+                  id="legal-no"
+                />
+                <label class="form-check-label" for="legal-no"
+                  >No</label
+                >
+              </div>
+          </div>
+
+          <div class="col-md-12">
+            <label for="offense" class="form-label">If "Yes", Description of the Offense (Include Date, Type
+(Misdemeanor/Felony), and Details)</label>
+            <input type="text" class="form-control" id="offense" />
+            <p><strong>Note:</strong> Ensure compliance with local laws, and only include necessary background
+questions relevant to the job</p>
+          </div>
+
+          <!-- Previous and Next buttons -->
+          <div class="col-md-12">
+            <button type="button" class="btn btn-secondary" id="prev-6">
+              Previous
+            </button>
+            <button type="button" class="btn btn-primary" id="next-6">
+              Next
+            </button>
+          </div>
+        </fieldset>
+
+
+        <fieldset id="step-7" class="row d-none">
+          <h2>Acknowledgement</h2>
+          <legend>Terms and Consent</legend>
+          <div class="col-md-12">
+            <label for="legal">Have You Ever Been Convicted of a Crime? (Yes/No)</label>
+            <div>
+              <p>Acknowledge and agree that the information provided is true and accurate.</p>
+              <p>Consent to drug testing, background checks, and company policies.
+</p>
+              <p>Signature (Digital) and Date.</p>
+            </div>
+
+            <div class="col-md-4">
+              <label for="signature">Signature</label>
+              <input type="text" id="signature" class="form-control">
+            </div>
+          </div>
+
+          <!-- Previous and Next buttons -->
+          <div class="col-md-12">
+            <button type="button" class="btn btn-secondary" id="prev-7">
+              Previous
+            </button>
+            <button type="button" class="btn btn-primary" id="next-7">
+              Next
+            </button>
+          </div>
+        </fieldset>
       </form>
     </div>
   </body>
