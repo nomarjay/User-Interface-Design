@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: lightgray;
+}
+
+.container{
+    margin: auto auto;
+    width:  60svw;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 2%;
+}
+
+h1,h2, hr{
+    margin-bottom: 30px;
+}
+
+
+
+button{
+    margin-top: 20px;
+}
