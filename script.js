@@ -21,29 +21,69 @@ $(document).ready(function () {
     localStorage.setItem("currentStep", nextStep.replace("#step-", "")); // Save the current step in localStorage
   }
 
-  // Next buttons
+  // Function to validate required fields in the current step
+  function validateStep(step) {
+    let isValid = true;
+
+    // Find all required fields in the current step
+    $(step)
+      .find("input[required]")
+      .each(function () {
+        const $input = $(this);
+        const errorDiv = $input.siblings(".error-message");
+
+        if (!$input.val().trim()) {
+          // Show error message if the field is empty
+          if (errorDiv.length === 0) {
+            $input.after(
+              '<div class="error-message text-danger">* Required field</div>'
+            );
+          }
+          isValid = false;
+        } else {
+          // Remove error message if the field is valid
+          errorDiv.remove();
+        }
+      });
+
+    return isValid;
+  }
+
+  // Next buttons with validation
   $("#next-1").click(function () {
-    goToStep("#step-1", "#step-2");
+    if (validateStep("#step-1")) {
+      goToStep("#step-1", "#step-2");
+    }
   });
 
   $("#next-2").click(function () {
-    goToStep("#step-2", "#step-3");
+    if (validateStep("#step-2")) {
+      goToStep("#step-2", "#step-3");
+    }
   });
 
   $("#next-3").click(function () {
-    goToStep("#step-3", "#step-4");
+    if (validateStep("#step-3")) {
+      goToStep("#step-3", "#step-4");
+    }
   });
 
   $("#next-4").click(function () {
-    goToStep("#step-4", "#step-5");
+    if (validateStep("#step-4")) {
+      goToStep("#step-4", "#step-5");
+    }
   });
 
   $("#next-5").click(function () {
-    goToStep("#step-5", "#step-6");
+    if (validateStep("#step-5")) {
+      goToStep("#step-5", "#step-6");
+    }
   });
 
   $("#next-6").click(function () {
-    goToStep("#step-6", "#step-7");
+    if (validateStep("#step-6")) {
+      goToStep("#step-6", "#step-7");
+    }
   });
 
   // Previous buttons
@@ -69,5 +109,10 @@ $(document).ready(function () {
 
   $("#prev-7").click(function () {
     goToStep("#step-7", "#step-6");
+  });
+
+  // Remove error message on input
+  $("input[required]").on("input", function () {
+    $(this).siblings(".error-message").remove();
   });
 });

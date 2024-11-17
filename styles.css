@@ -25,3 +25,9 @@ h1,h2, hr{
 button{
     margin-top: 20px;
 }
+
+
+.error-message {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
