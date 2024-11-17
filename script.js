@@ -115,4 +115,36 @@ $(document).ready(function () {
   $("input[required]").on("input", function () {
     $(this).siblings(".error-message").remove();
   });
+
+  // Function to clone education entry
+ let fieldsetIndex = 1; // To track unique fieldset indices
+
+ // Add new fieldset
+ $("#add-education-fieldset").click(function () {
+   let newFieldset = $("#education-step-container .education-step")
+     .first()
+     .clone();
+
+   // Clear input values and update attributes for uniqueness
+   newFieldset.find("input").each(function () {
+     $(this).val(""); // Clear input fields
+     if ($(this).attr("type") === "radio") {
+       let name = $(this).attr("name");
+       $(this).attr("name", name.replace(/\d+$/, fieldsetIndex)); // Update name attribute
+     }
+   });
+
+   // Append the new fieldset
+   $("#education-step-container").append(newFieldset);
+   fieldsetIndex++;
+ });
+
+ // Delete fieldset
+ $(document).on("click", ".delete-fieldset", function () {
+   if ($(".education-step").length > 1) {
+     $(this).closest(".education-step").remove();
+   } else {
+     alert("You must have at least one education fieldset.");
+   }
+ });
 });

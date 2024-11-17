@@ -202,69 +202,76 @@
         </fieldset>
 
         <!-- Step 3: Education -->
-        <fieldset id="step-3" class="row d-none">
-          <h2>Education</h2>
-          <!-- academic informtiom -->
-          <legend>Academic Background</legend>
-          <div class="col-md-4 form-check">
-            <label for="Institution Type">Institution Type</label>
-            <div>
-              <label class="form-check-label" for="high-school">High School</label>
-              <input class="form-check-input" type="radio" name="high-school"/>
-            </div>
-            <div>
-              <label class="form-check-label" for="undergraduate">Undergraduate</label>
-              <input class="form-check-input" type="radio" name="undergraduate"/>
-            </div>
-            <div>
-              <label class="form-check-label" for="graduate">Graduate</label>
-              <input class="form-check-input" type="radio" name="graduate"/>
-            </div>
-            <div>
-              <label class="form-check-label" for="post-graduate">Post Graduate</label>
-              <input class="form-check-input" type="radio" name="post-graduate"/>
-            </div>
-            <div>
-              <label class="form-check-label" for="professional">Professional</label>
-              <input class="form-check-input" type="radio" name="professional"/>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <label for="degree-earned" class="form-label">Highest Dilpoma/Degree/Certificate Earned</label>
-            <input type="text" class="form-control"/>
-          </div>
+      <div id="education-step-container">
+          <!-- Base fieldset to clone -->
+          <fieldset id="step-3" class="row education-step">
+            <h2>Education</h2>
+            <legend>Academic Background</legend>
 
-          <div class="col-md-4">
-            <label for="school-name">School Name</label>
-            <input type="text" class="form-control" />
-          </div>
+            <div class="col-md-4 form-check">
+              <label for="Institution Type">Institution Type</label>
+              <div>
+                <label class="form-check-label" for="high-school">High School</label>
+                <input class="form-check-input" type="radio" name="institution-type-0" />
+              </div>
+              <div>
+                <label class="form-check-label" for="undergraduate">Undergraduate</label>
+                <input class="form-check-input" type="radio" name="institution-type-0" />
+              </div>
+              <div>
+                <label class="form-check-label" for="graduate">Graduate</label>
+                <input class="form-check-input" type="radio" name="institution-type-0" />
+              </div>
+              <div>
+                <label class="form-check-label" for="post-graduate">Post Graduate</label>
+                <input class="form-check-input" type="radio" name="institution-type-0" />
+              </div>
+              <div>
+                <label class="form-check-label" for="professional">Professional</label>
+                <input class="form-check-input" type="radio" name="institution-type-0" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="degree-earned" class="form-label">Highest Diploma/Degree/Certificate Earned</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="col-md-4">
+              <label for="school-name">School Name</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="col-md-4">
+              <label for="school-city">City</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="col-md-2">
+              <label for="school-state">State</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="col-md-2">
+              <label for="graduation-date">Graduation Date</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="col-md-4">
+              <label for="major">Major/Degree/Certificate Earned</label>
+              <input type="text" class="form-control" />
+            </div>
 
-          <!-- address block -->
-          <div class="col-md-4">
-            <label for="school-city">City</label>
-            <input type="text" class="form-control" />
-          </div>
-          <div class="col-md-2">
-            <label for="school-state">State</label>
-            <input type="text" class="form-control"/>
-          </div>
+            <!-- Delete Button -->
+            <div class="col-md-12">
+              <button type="button" class="btn btn-danger btn-sm delete-fieldset">Delete Fieldset</button>
+            </div>
+          </fieldset>
+        </div>
 
-          <!-- date block -->
-          <div class="col-md-2">
-            <label for="graduation-date">Graduation Date</label>
-            <input type="text" class="form-control" />
-          </div>
-          <div class="col-md-4">
-            <label for="major">Major/Degree/Certificate Earned</label>
-            <input type="text" class="form-control" />
-          </div>
+        <!-- Add More Button -->
+        <div class="col-md-12">
+          <button type="button" id="add-education-fieldset" class="btn btn-success btn-sm">Add More Fieldset</button>
+          <button type="button" class="btn btn-secondary" id="prev-3">Previous</button>
+          <button type="button" class="btn btn-primary" id="next-3">Next</button>
+        </div>
 
-          <!-- Previous and Next buttons -->
-          <div class="col-md-12">
-            <button type="button" class="btn btn-secondary" id="prev-3">Previous</button>
-            <button type="button" class="btn btn-primary" id="next-3"> Next</button>
-          </div>
-        </fieldset>
+
+
 
         <!-- step 4: Skills -->
         <!-- skills & education block -->
