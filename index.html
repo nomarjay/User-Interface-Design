@@ -1,424 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      defer
-    ></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
     <script src="script.js" defer></script>
-    <title>UNFinished Business</title>
-  </head>
-  <body>
-    <!-- container -->     
-    <div class="container mt-5"> 
-      <h1 class="text-center">UNFinished Business Registration</h1>
-      <hr />
-      <form class="row g-3">
-        <!-- step 1 fieldset -->
-        <fieldset id="step-1" class="row">
-
-          <!-- personal info block -->
-          <h2>Personal Information</h2>
-          <legend>Personal Information</legend>
-          <div class="col-md-5">
-            <label for="firstName" class="form-label">First Name</label>
-            <input type="text" class="form-control" required />
-          </div>
-          <div class="col-md-2">
-            <label for="middleInitial" class="form-label"> Middle Initial</label>
-            <input type="text" class="form-control"/>
-          </div>
-          <div class="col-md-5">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" required />
-          </div>
-          <div class="col-md-8">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="text" class="form-control" required />
-          </div>
-          <div class="col-md-4">
-            <label for="phone" class="form-label">Phone</label>
-            <input type="text" class="form-control" placeholder="+1 (555)555-5555" required/>
-          </div>
-
-          <!-- address block -->
-          <legend>Address</legend>
-          <div class="col-md-4">
-            <label for="street" class="form-label">Street</label>
-            <input type="text" class="form-control" required />
-          </div>
-          <div class="col-md-4">
-            <label for="city" class="form-label">City</label>
-            <input type="text" class="form-control" required />
-          </div>
-          <div class="col-md-2">
-            <label for="state" class="form-label">State</label>
-            <input type="text" class="form-control" required />
-          </div>
-          <div class="col-md-2">
-            <label for="zipCode" class="form-label">Zip Code</label>
-            <input type="text" class="form-control" required />
-          </div>
-
-          <!-- availability block-->
-          <legend>Position and Availability</legend>
-          <div class="col-md-4">
-            <label for="positionApplied" class="form-label">Position Applied For</label>
-            <input type="text" class="form-control" required/>
-          </div>
-          <div class="col-md-2">
-            <label for="desiredSalary" class="form-label">Desired Salary</label>
-            <input type="text" class="form-control"/>
-          </div>
-          <div class="col-md-2">
-            <label for="startDate" class="form-label">Start Date</label>
-            <input type="text" class="form-control"/>
-          </div>
-
-          <div class="col-md-2 form-check">
-            <label for="nightAvailability">Available to work nights?</label>
-            <div>
-              <label class="form-check-label" for="yes">Yes</label>
-              <input class="form-check-input" type="radio" name="nightAvailability" required/>
-            </div>
-            <div>
-              <label class="form-check-label" for="no">No</label>
-              <input class="form-check-input" type="radio" name="nightAvailability"/>
-            </div>
-          </div>
-
-          <div class="col-md-2 form-check">
-            <label for="age-verfication">Are You At Least 18 Years Old?</label>
-            <div>
-              <label class="form-check-label" for="yes">Yes</label>
-              <input class="form-check-input" type="radio" name="age-verfication" required/>
-            </div>
-            <div>
-              <label class="form-check-label" for="no">No</label>
-              <input class="form-check-input" type="radio" name="age-verfication" />
-            </div>
-          </div>
-
-          <div class="col-md-12">
-            <button type="submit" class="btn btn-primary" id="next-1"> Next</button>
-          </div>
-        </fieldset>
-
-        <!-- step-2 fieldset -->
-        <fieldset id="step-2" class="row d-none">
-          <h2>Employment History</h2>
-          <!-- employer information -->
-          <legend>Work Experience</legend>
-          <div class="col-md-6">
-            <label for="employer-name" class="form-label">Employer Name</label>
-            <input type="text" class="form-control" required/>
-          </div>
-          <div class="col-md-4">
-            <label for="job-title" class="form-label">Job Title</label>
-            <input type="text" class="form-control" id="job-title" required />
-          </div>
-
-          <!-- employer contact -->
-          <div class="col-md-2">
-            <label for="employer-phone" class="form-label">Employer Phone Number</label>
-            <input type="text" class="form-control" required/>
-          </div>
-
-          <!-- employer address -->
-          <div class="col-md-4">
-            <label for="employer-street" class="form-label">Street</label>
-            <input type="text" class="form-control" required/>
-          </div>
-          <div class="col-md-4">
-            <label for="employer-city" class="form-label">City</label>
-            <input type="text" class="form-control" required/>
-          </div>
-          <div class="col-md-2">
-            <label for="employer-state" class="form-label">State</label>
-            <input type="text" class="form-control" required/>
-          </div>
-          <div class="col-md-2">
-            <label for="employer-zipCode" class="form-label">Zip Code</label>
-            <input type="text" class="form-control" required/>
-          </div>
-
-          <!-- work details -->
-          <div class="col-md-4">
-            <label for="supervisor-name" class="form-label">Supervisor's Name</label>
-            <input type="text" class="form-control" required/>
-          </div>
-          <div class="col-md-2">
-            <label for="start-date" class="form-label">Start Date</label>
-            <input type="text" class="form-control"required />
-          </div>
-          <div class="col-md-2">
-            <label for="end-date" class="form-label">End Date</label>
-            <input type="text" class="form-control" required />
-          </div>
-
-          <div class="col-md-4">
-            <label for="salary" class="form-label">Pay or Salary</label>
-            <input type="text" class="form-control"/>
-          </div>
-          <div class="col-md-12 form">
-            <label for="leaving">Reason for leaving</label>
-            <textarea class="form-control" style="height: 100px"></textarea>
-          </div>
-
-          <div class="col-md-2 form-check">
-            <label for="contact-queation">May We Contact?</label>
-            <div>
-              <label class="form-check-label" for="yes">Yes</label>
-              <input class="form-check-input" type="radio"  name="contact-question" required/>
-            </div>
-            <div>
-              <label class="form-check-label" for="no">No</label>
-              <input class="form-check-input" type="radio" name="contact-question"/>
-            </div>
-          </div>
-
-          <!-- Previous and Next buttons -->
-          <div class="col-md-12">
-            <button type="button" class="btn btn-secondary" id="prev-2"> Previous</button>
-            <button type="button" class="btn btn-primary" id="next-2"> Next</button>
-          </div>
-        </fieldset>
-
-        <!-- Step 3: Education -->
-      <div id="education-step-container">
-          <!-- Base fieldset to clone -->
-          <fieldset id="step-3" class="row education-step">
-            <h2>Education</h2>
-            <legend>Academic Background</legend>
-
-            <div class="col-md-4 form-check">
-              <label for="Institution Type">Institution Type</label>
-              <div>
-                <label class="form-check-label" for="high-school">High School</label>
-                <input class="form-check-input" type="radio" name="institution-type-0" />
-              </div>
-              <div>
-                <label class="form-check-label" for="undergraduate">Undergraduate</label>
-                <input class="form-check-input" type="radio" name="institution-type-0" />
-              </div>
-              <div>
-                <label class="form-check-label" for="graduate">Graduate</label>
-                <input class="form-check-input" type="radio" name="institution-type-0" />
-              </div>
-              <div>
-                <label class="form-check-label" for="post-graduate">Post Graduate</label>
-                <input class="form-check-input" type="radio" name="institution-type-0" />
-              </div>
-              <div>
-                <label class="form-check-label" for="professional">Professional</label>
-                <input class="form-check-input" type="radio" name="institution-type-0" />
-              </div>
-            </div>
-            <div class="col-md-4">
-              <label for="degree-earned" class="form-label">Highest Diploma/Degree/Certificate Earned</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="col-md-4">
-              <label for="school-name">School Name</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="col-md-4">
-              <label for="school-city">City</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="col-md-2">
-              <label for="school-state">State</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="col-md-2">
-              <label for="graduation-date">Graduation Date</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="col-md-4">
-              <label for="major">Major/Degree/Certificate Earned</label>
-              <input type="text" class="form-control" />
-            </div>
-
-            <!-- Delete Button -->
-            <div class="col-md-12">
-              <button type="button" class="btn btn-danger btn-sm delete-fieldset">Delete Fieldset</button>
-            </div>
-          </fieldset>
-        </div>
-
-        <!-- Add More Button -->
-        <div class="col-md-12">
-          <button type="button" id="add-education-fieldset" class="btn btn-success btn-sm">Add More Fieldset</button>
-          <button type="button" class="btn btn-secondary" id="prev-3">Previous</button>
-          <button type="button" class="btn btn-primary" id="next-3">Next</button>
-        </div>
-
-
-
-
-        <!-- step 4: Skills -->
-        <!-- skills & education block -->
-        <fieldset id="step-4" class="row d-none">
-          <h2>Skills & Qualifications</h2>
-          <legend>Additional Information</legend>
-          <div>
-            <label for="additional-info">Additional Skills, Experiences, or Certifications relevant to the position</label>
-            <textarea class="form-control" id="additional-info" style="height: 200px"></textarea>
-          </div>
-
-          <!-- Previous and Next buttons -->
-          <div class="col-md-12">
-            <button type="button" class="btn btn-secondary" id="prev-4">
-              Previous
-            </button>
-            <button type="button" class="btn btn-primary" id="next-4">
-              Next
-            </button>
-          </div>
-        </fieldset>
-
-        <!-- step 5: Skills -->
-        <!-- references block -->
-        <fieldset id="step-5" class="row d-none">
-          <h2>Professional References</h2>
-          <legend>References</legend>
-          <div class="col-md-5">
-            <label for="reference-first-name" class="form-label">First Name</label>
-            <input type="text" class="form-control" required/>
-          </div>
-          <div class="col-md-6">
-            <label for="reference-last-name" class="form-label">Last Name</label>
-            <input type="text" class="form-control" required/>
-          </div>
-          <div class="col-md-4">
-            <label for="reference-company" class="form-label">Company</label>
-            <input type="text" class="form-control" required/>
-          </div>
-
-          <div class="col-md-2">
-            <label for="reference-job-title" class="form-label">Job Title</label>
-            <input type="text" class="form-control" id="reference-job-title" required/>
-          </div>
-
-          <!-- address block -->
-          <legend>Address</legend>
-          <div class="col-md-4">
-            <label for="reference-street" class="form-label">Street</label>
-            <input type="text" class="form-control"/>
-          </div>
-          <div class="col-md-4">
-            <label for="reference-city" class="form-label">City</label>
-            <input type="text" class="form-control"/>
-          </div>
-          <div class="col-md-2">
-            <label for="state" class="form-label">State</label>
-            <input type="text" class="form-control"/>
-          </div>
-          <div class="col-md-2">
-            <label for="reference-zip-code" class="form-label">Zip Code</label>
-            <input type="text" class="form-control"/>
-          </div>
-
-          <!-- contact block -->
-          <legend>Contact Information</legend>
-          <div class="col-md-8">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="text" class="form-control" required />
-          </div>
-          <div class="col-md-4">
-            <label for="phone" class="form-label">Phone</label>
-            <input type="text" class="form-control" placeholder="+1 (555)555-5555" required/>
-          </div>
-
-          <!-- Previous and Next buttons -->
-          <div class="col-md-12">
-            <button type="button" class="btn btn-secondary" id="prev-5">Previous</button>
-            <button type="button" class="btn btn-primary" id="next-5">Next</button>
-          </div>
-        </fieldset>
-
-        <fieldset id="step-6" class="row d-none">
-          <h2>Legal Information</h2>
-          <legend>Legal Information</legend>
-          <div class="col-md-4 form-check">
-            <label for="legal">Have You Ever Been Convicted of a Crime? (Yes/No)</label>
-            <div>
-              <input class="form-check-input" type="radio" name="legal-yes"/>
-              <label class="form-check-label" for="legal-yes">Yes</label>
-            </div>
-            <div>
-              <input class="form-check-input" type="radio" name="legal-no"/>
-              <label class="form-check-label" for="legal-no">No</label>
-            </div>
-          </div>
-
-          <div class="col-md-12">
-            <label for="offense" class="form-label">If "Yes", Description of the Offense (Include Date, Type (Misdemeanor/Felony), and Details)</label>
-            <input type="text" class="form-control" />
-            <p>
-              <strong>Note:</strong> Ensure compliance with local laws, and only
-              include necessary background questions relevant to the job
-            </p>
-          </div>
-
-          <!-- Previous and Next buttons -->
-          <div class="col-md-12">
-            <button type="button" class="btn btn-secondary" id="prev-6">
-              Previous
-            </button>
-            <button type="button" class="btn btn-primary" id="next-6">
-              Next
-            </button>
-          </div>
-        </fieldset>
-
-        <fieldset id="step-7" class="row d-none">
-          <h2>Acknowledgement</h2>
-          <legend>Terms and Consent</legend>
-          <div class="col-md-12">
-            <label for="legal">Have You Ever Been Convicted of a Crime? (Yes/No)</label>
-            <div>
-              <p>
-                Acknowledge and agree that the information provided is true and
-                accurate.
-              </p>
-              <p>
-                Consent to drug testing, background checks, and company
-                policies.
-              </p>
-              <p>Signature (Digital) and Date.</p>
-            </div>
-
-            <div class="col-md-4">
-              <label for="signature">Signature</label>
-              <input type="text" id="signature" class="form-control" />
-            </div>
-          </div>
-
-          <!-- Previous and Next buttons -->
-          <div class="col-md-12">
-            <button type="button" class="btn btn-secondary" id="prev-7">Previous</button>
-            <button type="submit" class="btn btn-primary" id="next-7">Submit</button>
-          </div>
-        </fieldset>
-      </form>
+    <title>UNFinished Business Registration</title>
+</head>
+<body>
+    <div class="container">
+        <h1>UNFinished Business Registration</h1>
+        <form id="job-application-form">
+            
+            <!-- Personal Information -->
+            <fieldset id="step-1" class="row">
+                <h2>Personal Information</h2>
+                <legend>Personal Information</legend>
+                <div class="col-md-6">
+                    <label for="first-name" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="first-name" name="first-name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="last-name" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" name="last-name" required>
+                </div>
+                <div class="col-md-8">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
+                </div>
+                <div class="col-md-4">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required pattern="\d{10}" title="Please enter a valid 10-digit phone number.">
+                </div>
+                
+                <!-- Address -->
+                <legend>Address</legend>
+                <div class="col-md-6">
+                    <label for="street-address" class="form-label">Street Address</label>
+                    <input type="text" class="form-control" id="street-address" name="street-address" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city" name="city" required>
+                </div>
+                <div class="col-md-2">
+                    <label for="state" class="form-label">State</label>
+                    <input type="text" class="form-control" id="state" name="state" required>
+                </div>
+                <div class="col-md-2">
+                    <label for="zip-code" class="form-label">Zip Code</label>
+                    <input type="text" class="form-control" id="zip-code" name="zip-code" required>
+                </div>
+                
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" id="next-1">Next</button>
+                </div>
+            </fieldset>
+            
+            <!-- Position and Employment Preferences -->
+            <fieldset id="step-2" class="row d-none">
+                <h2>Position and Employment Preferences</h2>
+                <legend>Position and Employment Preferences</legend>
+                <div class="col-md-6">
+                    <label for="position-applied-for" class="form-label">Position Applied For</label>
+                    <select id="position-applied-for" name="position-applied-for" class="form-select" required>
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="manager">Manager</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="available-start-date" class="form-label">Available Start Date</label>
+                    <input type="date" class="form-control" id="available-start-date" name="available-start-date" required>
+                </div>
+                <div class="col-md-12">
+                    <label>Employment Type:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="full-time" name="employment-type" value="full-time" required>
+                        <label class="form-check-label" for="full-time">Full-time</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="part-time" name="employment-type" value="part-time" required>
+                        <label class="form-check-label" for="part-time">Part-time</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="contract" name="employment-type" value="contract" required>
+                        <label class="form-check-label" for="contract">Contract</label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-secondary" id="prev-2">Previous</button>
+                    <button type="button" class="btn btn-primary" id="next-2">Next</button>
+                </div>
+            </fieldset>
+            <!-- Work Experience Section -->
+            <fieldset id="step-3" class="row d-none">
+                <h2>Work Experience</h2>
+                <legend>Work Experience</legend>
+                <div class="col-md-6">
+                    <label for="company-name" class="form-label">Company Name</label>
+                    <input type="text" class="form-control" id="company-name" name="company-name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="job-title" class="form-label">Job Title</label>
+                    <input type="text" class="form-control" id="job-title" name="job-title" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="start-date" class="form-label">Start Date</label>
+                    <input type="date" class="form-control" id="start-date" name="start-date" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="end-date" class="form-label">End Date</label>
+                    <input type="date" class="form-control" id="end-date" name="end-date">
+                </div>
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="currently-employed" name="currently-employed">
+                        <label for="currently-employed" class="form-check-label">Currently Employed</label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="responsibilities" class="form-label">Responsibilities</label>
+                    <textarea class="form-control" id="responsibilities" name="responsibilities" rows="4" required></textarea>
+                </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-secondary" id="prev-3">Previous</button>
+                    <button type="button" class="btn btn-primary" id="next-3">Next</button>
+                </div>
+            </fieldset>
+            
+            <!-- Education Section -->
+            <fieldset id="step-4" class="row d-none">
+                <h2>Education</h2>
+                <legend>Education</legend>
+                <div class="col-md-6">
+                    <label for="school-name" class="form-label">School Name</label>
+                    <input type="text" class="form-control" id="school-name" name="school-name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="degree-earned" class="form-label">Degree Earned</label>
+                    <input type="text" class="form-control" id="degree-earned" name="degree-earned" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="education-start-date" class="form-label">Start Date</label>
+                    <input type="date" class="form-control" id="education-start-date" name="education-start-date" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="education-end-date" class="form-label">End Date</label>
+                    <input type="date" class="form-control" id="education-end-date" name="education-end-date">
+                </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-secondary" id="prev-4">Previous</button>
+                    <button type="button" class="btn btn-primary" id="next-4">Next</button>
+                </div>
+            </fieldset>
+            
+            <!-- Skills and Qualifications Section -->
+            <fieldset id="step-5" class="row d-none">
+                <h2>Skills and Qualifications</h2>
+                <legend>Skills and Qualifications</legend>
+                <div class="col-md-12">
+                    <label for="skills" class="form-label">Skills</label>
+                    <textarea class="form-control" id="skills" name="skills" rows="4" required></textarea>
+                </div>
+                <div class="col-md-12">
+                    <label for="certifications" class="form-label">Certifications</label>
+                    <input type="text" class="form-control" id="certifications" name="certifications" required>
+                </div>
+                <div class="col-md-12">
+                    <label>Languages</label>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="english" name="languages" value="english">
+                        <label for="english" class="form-check-label">English</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="spanish" name="languages" value="spanish">
+                        <label for="spanish" class="form-check-label">Spanish</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="french" name="languages" value="french">
+                        <label for="french" class="form-check-label">French</label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-secondary" id="prev-5">Previous</button>
+                    <button type="button" class="btn btn-primary" id="next-5">Next</button>
+                </div>
+            </fieldset>
+            
+            <!-- References Section -->
+            <fieldset id="step-6" class="row d-none">
+                <h2>References</h2>
+                <legend>References</legend>
+                <div class="col-md-6">
+                    <label for="reference-name" class="form-label">Reference Name</label>
+                    <input type="text" class="form-control" id="reference-name" name="reference-name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="reference-phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="reference-phone" name="reference-phone" required pattern="\d{10}" title="Please enter a valid 10-digit phone number.">
+                </div>
+                <div class="col-md-6">
+                    <label for="reference-email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
+                </div>
+                <div class="col-md-6">
+                    <label for="reference-relationship" class="form-label">Relationship</label>
+                    <input type="text" class="form-control" id="reference-relationship" name="reference-relationship" required>
+                </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-secondary" id="prev-6">Previous</button>
+                    <button type="button" class="btn btn-primary" id="next-6">Next</button>
+                </div>
+            </fieldset>
+            
+            <!-- File Upload Section -->
+            <fieldset id="step-7" class="row d-none">
+                <h2>File Upload</h2>
+                <legend>File Upload</legend>
+                <div class="col-md-12">
+                    <label for="resume-upload" class="form-label">Resume Upload (PDF, DOC, DOCX)</label>
+                    <input type="file" class="form-control" id="resume-upload" name="resume-upload" accept=".pdf,.doc,.docx" required>
+                </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-secondary" id="prev-7">Previous</button>
+                    <button type="button" class="btn btn-primary" id="next-7">Next</button>
+                </div>
+            </fieldset>
+            
+            <!-- Background Check Authorization -->
+            <fieldset id="step-8" class="row d-none">
+                <h2>Background Check Authorization</h2>
+                <legend>Authorization</legend>
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="authorization-checkbox" name="authorization-checkbox" required>
+                        <label for="authorization-checkbox" class="form-check-label">I authorize the background check</label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-secondary" id="prev-8">Previous</button>
+                    <button type="button" class="btn btn-primary" id="next-8">Next</button>
+                </div>
+            </fieldset>
+            
+            <!-- Submit Section -->
+            <fieldset id="step-9" class="row d-none">
+                <h2>Review and Submit</h2>
+                <legend>Review and Submit</legend>
+                <p>Please review your application before submitting.</p>
+                <div id="summary" class="col-md-12"></div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-success">Submit Application</button>
+                    <button type="button" class="btn btn-secondary" id="prev-9">Previous</button>
+                </div>
+            </fieldset>
+        </form>
     </div>
-  </body>
+</body>
 </html>
