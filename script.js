@@ -111,31 +111,51 @@ $(document).ready(function () {
     goToStep("#step-7", "#step-6");
   });
 
+  // Next buttons with validation
+  $("#next-7").click(function () {
+    if (validateStep("#step-7")) {
+      goToStep("#step-7", "#step-8");
+    }
+  });
+
+  $("#next-8").click(function () {
+    if (validateStep("#step-8")) {
+      goToStep("#step-8", "#step-9");
+    }
+  });
+
+  // Previous buttons
+  $("#prev-8").click(function () {
+    goToStep("#step-8", "#step-7");
+  });
+
+  $("#prev-9").click(function () {
+    goToStep("#step-9", "#step-8");
+  });
+
   // Remove error message on input
   $("input[required]").on("input", function () {
     $(this).siblings(".error-message").remove();
   });
 
-  // Function to clone education entry
   let fieldsetIndex = 1; // To track unique fieldset indices
 
   // Add new fieldset
-  $("#add-education-fieldset").click(function () {
-    let newFieldset = $("#education-step-container .education-step")
-      .first()
-      .clone();
+  $(document).on("click", ".btn-success", function () {
+    let newFieldset = $(".education-step").first().clone(); // Clone the first fieldset
 
     // Clear input values and update attributes for uniqueness
     newFieldset.find("input").each(function () {
       $(this).val(""); // Clear input fields
-      if ($(this).attr("type") === "radio") {
-        let name = $(this).attr("name");
-        $(this).attr("name", name.replace(/\d+$/, fieldsetIndex)); // Update name attribute
+      let name = $(this).attr("name");
+      if (name) {
+        $(this).attr("name", name.replace(/\d+$/, "") + fieldsetIndex); // Ensure unique 'name' attributes
       }
     });
 
-    // Append the new fieldset
-    $("#education-step-container").append(newFieldset);
+    // Append the cloned fieldset after the last existing fieldset
+    $("#step-4").parent().append(newFieldset);
+
     fieldsetIndex++;
   });
 
